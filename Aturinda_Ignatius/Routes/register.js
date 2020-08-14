@@ -10,9 +10,7 @@ const router = express.Router();
 
 router.get('/',(req,res)=>{
     res.render('register')
-})
-
-
+});
 
 router.post('/submit',(req , res)=>{
     console.log(req.body);

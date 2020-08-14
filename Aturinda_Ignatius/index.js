@@ -1,6 +1,7 @@
 const express = require('express');
-const mongoose = require('mongoose');
 const bodyParser= require('body-parser');
+const mongoose = require('mongoose');
+
 require('dotenv').config();
 //Importing the register route and assigning a variable Register to it
 const Register = require('./Routes/register')
@@ -12,6 +13,9 @@ app.set('view engine', 'pug');
 app.set('views', './views');
 //Setting path for static files
 app.use(express.static('public'))
+
+
+app.use(bodyParser.urlencoded({extended: true}))
 
 mongoose.connect(process.env.DATABASE, {
     useNewUrlParser: true,
