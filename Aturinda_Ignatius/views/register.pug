@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet" href="/bootstrap/css/bootstrap.min.css")
+        script(src="/bootstrap/js/bootstrap.min.js")
+        script(src="/bootstrap/js/jquery-3.5.1.js")
+        title Covid Virus-Test Registration form
+        style.
+            body{
+                font-weight: bold;
+            }
+            .label{
+                font-size:18px;
+            }
+            .container{
+                width:60%;
+                border: 1.8px solid lightgray;
+                padding: 2px;
+                margin-top:20px;
+            }
+            .coat{
+                margin-left: auto;
+                margin-right: auto;
+                display: block;
+            }
+            .form{
+                width: 80%;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .error{
+                color:red;
+            }
+    body
+        .container
+            .row
+                .col-lg-5(style="height:5rem")
+                    img(src="/images/uganda-flag-part.png" alt="" width="100%" height="100%")
+                .col-lg-2(style="height:5rem")
+                    img(src="/images/uganda-coat_of_arms.png" alt="" width="75%" height="100%").coat
+                .col-lg-5(style="height:5rem")
+                    img(src="/images/uganda-flag-part.png" alt="" width="100%" height="100%")
+            div
+                h4(style='text-align:center;') Ministry of Health
+            div
+                h3(style='text-align:center; font-weight:bold;') COVID-19(CORONA VIRUS)
+            div
+                h4(style='text-align: center;') Virus-Test Registration Form
+            div.form    
+                form(action="/submit" name="registration_form" method="POST").form-group
+                    div.row
+                        div.col-sm-12.col-md-6
+                            div.label
+                                label(for="surname") Surname
+                            div
+                                input.form-control(type="text" name="surname" )
+                                small.error
+                                    span(id="surname_error")
+                        div.col-sm-12.col-md-6
+                            div.label
+                                Label(for="given_name") Given name 
+                            div
+                                input.form-control(type="text" name="given_name")
+                                small.error
+                                    span(id="given_name_error")
+
+                        div.col-sm-12.col-md-6
+                            div.label
+                                label(for="dob") Date of Birth
+                            div
+                                input.form-control(type="text" name="dob" placeholder='YY/MM/DD' )
+                                small.error
+                                    span(id="dob_error")
+                        div.col-sm-12.col-md-6
+                            div.label
+                                Label(for="place_of_residence") Place of residence
+                            div
+                                input.form-control(type="text" name="place_of_residence")
+                                small.error
+                                    span(id="place_of_residence_error")
+                        div.col-sm-12.col-md-6
+                            div.label
+                                label(for="occupation") Occupation
+                            div
+                                input.form-control(type="text" name="occupation" )
+                                small.error
+                                    span(id="occupation_error")
+                        div.col-sm-12.col-md-6
+                            div.label
+                                Label(for="nationality") Nationality
+                            div
+                                input.form-control(type="text" name="nationality")
+                                small.error
+                                    span(id="nationality_error")   
+
+                        div.col-sm-12.col-md-12
+                            div.label
+                                label(for="gender") Gender
+                                small.error
+                                        span(id="gender_error")
+                                hr
+                            .row    
+                                .col-md-5(style="display: flex;")
+                                    input.form-control(type="radio" name='gender' value='male' ) 
+                                    h4(style=" margin-left: -80px;") Male
+                                    small.error
+                                        span(id="occupation_error")
+                                .col-md-5(style="display: flex;")
+                                    input.form-control(type="radio" name='gender' value='female') 
+                                    h4(style=" margin-left: -80px;") Female
+                                       
+                        div.col-sm-12.col-md-12
+                            div.label
+                                Label(for="categories") Categories
+                            div
+                                select.form-control(name="categories" placeholder="--Select Category--" style="text-align: center;")
+                                    option(value="" disabled="disabled" hidden) --Select Category--
+                                    option(value='returnee') Returnee
+                                    option(value='contact') Contact
+                                    option(value='volunteer') Volunteer
+                                small.error
+                                    span(id="categories_error")                      
+                        div.col-sm-12.col-md-6
+                        div.col-sm-12.col-md-6
+                            br    
+                            div.submit_buttom 
+                                button.btn.btn-primary(type="submit" onClick="regValidation()" style="width:100%") Submit
+        script(src="/js/regValidation.js")
+
+
+
+                            
+                                    
+                    
